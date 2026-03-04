@@ -10,7 +10,7 @@ GCC = gcc
 all : tester tester_sol overflow
 
 submitfiles: 
-	zip submitfiles.zip *.c *.h bad_args Makefile
+	zip submitfiles.zip *.c *.h bad_arg Makefile
 
 %.o : %.c
 	$(GCC) $(CFLAGS) $*.c
