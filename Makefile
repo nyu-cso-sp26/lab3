@@ -16,13 +16,13 @@ submitfiles:
 	$(GCC) $(CFLAGS) $*.c
 
 tester : $(OBJS) $(TESTEROBJ)
-	$(GCC) $^ -o $@
+	$(GCC) -no-pie $^ -o $@
 
 tester_sol : $(SOLOBJS) $(TESTEROBJ)
-	$(GCC) $^ -o $@
+	$(GCC) -no-pie $^ -o $@
 
 overflow : $(OVERFLOWOBJ)
-	$(GCC) $^ -o $@
+	$(GCC) -no-pie $^ -o $@
 
 clean :
 	rm -f $(OBJS) tester 
